@@ -1,4 +1,10 @@
 # Python to Linux Web App on Azure
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'Azure subscription 1(f5c17906-f558-4b09-a4c8-f6a1c100ce3d)'
+    appType: 'webAppLinux'
+    appName: 'flask-tutorial-tomato'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
 # Build your Python project and deploy it to Azure as a Linux Web App.
 # Change python version to one thats appropriate for your application.
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
